@@ -17,6 +17,11 @@ if linux?
   dependency 'nfsiostat'
 end
 
+if !windows?
+  # need kerberos for hdfs
+  dependency 'libkrb5'
+end
+
 relative_path 'integrations-core'
 whitelist_file "embedded/lib/python2.7"
 
