@@ -17,7 +17,7 @@ if linux?
   dependency 'nfsiostat'
 end
 
-unless !windows?
+unless windows?
   # need kerberos for hdfs
   dependency 'libkrb5'
 end
